@@ -7,6 +7,7 @@ import Logement from "./pages/Logement";
 
 const Router = ()=>{
     return(
+        <>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
@@ -15,6 +16,7 @@ const Router = ()=>{
                     <Route path="*" element={<Error/>}/>
                 </Routes>
             </BrowserRouter>
+            </>    
             )
 }
 

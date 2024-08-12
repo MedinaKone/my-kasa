@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.App {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-family: 'Montserrat';
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      padding: 45px 45px 0px 45px;
+      
+      img {
+        margin-right: 10px;
+      }
+      
+  }
+  
+    
+}

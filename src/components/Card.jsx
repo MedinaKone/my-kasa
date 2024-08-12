@@ -1,13 +1,16 @@
-import "../styles/card.scss";
-
-const Card = ({ title, cover }) => {
+const Card = ({ logements }) => {
   return (
-    <div className="card">
+    <>
+    {logements.map((logement) =>(
+      <div className="card">
       <div className="card-image-container">
-        <img src={cover} alt={cover} className="card-cover" />
-        <h2 className="card-title">{title}</h2>
+        <img src={logement.cover} alt={logement.title} className="card-cover" />
+        <h2 className="card-title">{logement.title}</h2>
       </div>
     </div>
+
+    ))}
+    </>
   );
 };
 
