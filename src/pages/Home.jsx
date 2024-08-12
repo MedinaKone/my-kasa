@@ -1,6 +1,12 @@
+import FirstSection from "../components/FirstSection"
+import Gallery from "../components/Gallery"
+
 const Home = ()=> {
     return(
-        <h1>Home</h1>
+        <section className="main-content">
+       <FirstSection /> 
+       <Gallery />
+       </section>
     )
 }
 
