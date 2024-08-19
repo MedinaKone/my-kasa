@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+
+
 .App {
     background-color: white;
     min-height: 100vh;
@@ -8,3 +10,11 @@
     gap: 50px;
     font-family: 'Montserrat';
 }
+
+
+
+// Colors
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+$text-color__white: #FFFFFF;
+$text-color__black: #000000

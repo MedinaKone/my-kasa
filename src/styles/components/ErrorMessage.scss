@@ -4,31 +4,33 @@
     gap: 139px;
     justify-content: center;
     margin: auto;
+    .errorText {
+        color: $primary-color;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .codeError404 {
+            font-size: 288px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+          }
+        .errorDescription {
+            font-size: 36px;
+            font-weight: 700;
+        }          
+    }
+    .homeLink {
+        font-size: 18px;
+        text-decoration: underline;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.errorText {
-    color: #FF6060;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.codeError404 {
-  font-size: 288px;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-}
 
 
-.errorDescription {
-    font-size: 36px;
-    font-weight: 700;
-}
 
-.homeLink {
-    font-size: 18px;
-    text-decoration: underline;
-    display: flex;
-    justify-content: center;
-}
+
+
+

@@ -1,47 +1,59 @@
+$gap-size: 30px;
+$border-radius: 5px;
+
+@mixin transition($transition) {
+    transition: $transition;
+}
+
+
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .item {
+            border-radius: $border-radius;
+            width: 1023px;
+        }
+        .title {
+            background-color: $primary-color;
+            color: $text-color__white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer; 
+            border-radius: $border-radius;
+            padding: 10px 20px 10px 15px;
+            height: 52px;
+            .fa-solid.fa-chevron-down, .fa-solid.fa-chevron-up {
+                font-size: 23px;
+            }
+        }
+        .content {
+            background-color: $secondary-color;
+            color: $text-color__black;
+            max-height: 0;
+            overflow: hidden;
+            transition: all cubic-bezier(0,1,0,1);
+        }
+        .content.show {
+            padding: 15px 15px 15px 15px;
+            height: auto;
+            max-height: 9999px;
+            transition: all  cubic-bezier(1,0,1,0);
+        }        
+    }
 }
 
-.accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
 
-.item {
-    border-radius: 5px;
-    width: 1023px;
-}
 
-.title {
-    background-color: #FF6060;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 10px 20px 10px 15px;
-    height: 52px;
-}
 
-.content {
-    background-color: #F6F6F6;
-    color: black;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
-}
 
-.content.show {
-    padding: 15px 15px 15px 15px;
-    height: auto;
-    max-height: 9999px;
-    transition: all 0.5s cubic-bezier(1,0,1,0);
-}
 
-.fa-solid.fa-chevron-down, .fa-solid.fa-chevron-up {
-    font-size: 23px;
-}
+
+
+
+

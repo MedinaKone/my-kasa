@@ -3,14 +3,14 @@
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    background-color: #F6F6F6;
+    background-color: $secondary-color;
     border-radius: 25px;
     width: 1240px;
     padding: 50px 0px;
     .card {
         width: 340px;
         height: 340px;
-        color: white;
+        color: $text-color__white;
         position: relative;
     }
 }
@@ -28,7 +28,7 @@
     }
     .card-title {
         position: absolute;
-        background-color: #FF6060;
+        background-color: $primary-color;
         bottom: 0;
         left: 0;
         margin: 20px;
