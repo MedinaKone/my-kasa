@@ -28,10 +28,12 @@
     }
     .card-title {
         position: absolute;
-        background-color: $primary-color;
         bottom: 0;
         left: 0;
         margin: 20px;
+        font-size: 18px;
+        line-height: 25.67px;
+        width: 50%;
     }
 }
 
