@@ -14,9 +14,9 @@ $border-radius: 5px;
         display: flex;
         flex-direction: column;
         gap: 30px;
+        width: 100%;
         .item {
             border-radius: $border-radius;
-            width: 1023px;
         }
         .title {
             background-color: $primary-color;
@@ -49,9 +49,29 @@ $border-radius: 5px;
 }
 
 
+//Page "ABOUT"
+.about-details {
+    width: 1023px;
+}
 
+// Page "LOGEMENT"
+.logement-infos {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
 
+.logement-equipements,
+.logement-description {
+    width: 50%;    
+}
 
+.logement-equipements ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
 
 

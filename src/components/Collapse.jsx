@@ -2,7 +2,7 @@ import { useState } from "react";
 import arrowUp from "../assets/arrow_up.png"
 import arrowDown from "../assets/arrow_down.png"
 
-const Collapse = ({item}) => {
+const Collapse = ({item, className}) => {
   const [selected, setSelected] = useState(false);
 
   const toggleOpen = ()=> {
@@ -11,7 +11,7 @@ const Collapse = ({item}) => {
 
 
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${className}`}>
       <div className="accordion">
           <div className="item">
             <div className="title" onClick={toggleOpen}>

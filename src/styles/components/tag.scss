@@ -1,0 +1,17 @@
+.logement-tag {
+    height: 25px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    padding: 7px 40px 0px 40px;
+}
+
+.logement-tags {
+    display: flex;
+    gap: 10px;
+}

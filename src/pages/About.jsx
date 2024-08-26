@@ -10,8 +10,12 @@ const About = () => {
       <main>
         <Banner type="about" />
         <section className="main-content">
-        {datas.map((data, index) =>(
-          <Collapse item={data} key={index}/>
+        {datas.map((data, index,) =>(
+          <Collapse 
+          item={data} 
+          key={index}
+          className="about-details"
+          />
           ))}
         </section>
       </main>

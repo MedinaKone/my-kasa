@@ -1,0 +1,16 @@
+.host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.host-name {
+    color: $primary-color;
+    font-size: 18px;
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
