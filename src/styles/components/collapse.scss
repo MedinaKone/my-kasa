@@ -73,7 +73,12 @@ $border-radius: 5px;
     width: 100%;
 }
 
-
-
-
+.arrow {
+    transition: transform 0.3s ease; /* Animation douce */
+  }
+  
+  .arrow-up {
+    transform: rotate(180deg); /* Rotation de 180 degrés pour la flèche vers le haut */
+  }
+  
 

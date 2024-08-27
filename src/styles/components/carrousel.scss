@@ -1,0 +1,56 @@
+.carrousel {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
+}
+
+.logement-img {
+    width: 1240px;
+    height: 415px;
+    object-fit: cover; 
+  }
+  
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev img, .next img {
+  width: 46px;  /* Largeur du SVG */
+  height: 79px; /* Hauteur du SVG */
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+.image-counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'montserrat';
+  }

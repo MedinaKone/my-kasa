@@ -6,6 +6,8 @@ import Tag from "../components/Tag";
 import Collapse from "../components/Collapse";
 import Stars from "../components/stars";
 import Host from "../components/Host";
+import Error from "../pages/Error";
+import Carrousel from "../components/Carrousel";
 
 const Logement = () => {
   const { id } = useParams();
@@ -13,20 +15,17 @@ const Logement = () => {
   const logement = Logements.find((logement) => logement.id === id);
 
   if (!logement) {
-    return <div>Logement non trouvé</div>;
+    return <div><Error /></div>;
   }
+
+  const images = logement.pictures || [logement.picture];
+
 
   return (
     <>
       <Header />
       <div className="main-logement">
-        <img
-          className="logement-img"
-          src={logement.cover}
-          alt={logement.title}
-          width={1240}
-          height={415}
-        />
+      <Carrousel images={images} />
         <div className="logement-header">
           <div className="logement-info">
             <h2 className="logement-title">{logement.title}</h2>
