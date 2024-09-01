@@ -6,12 +6,15 @@
     justify-content: center
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
+    .main-home {
+      width: 100%;
+    }
     .main-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 22px;
-      justify-content: center
+      justify-content: center;
     }
     }

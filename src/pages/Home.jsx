@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="main-home">
         <Banner type="home" />
         <section className="card-section">
           <div className="card-container">

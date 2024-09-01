@@ -12,7 +12,7 @@
     color: $primary-color; 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
     .logement-stars {
         display: none;
     } 

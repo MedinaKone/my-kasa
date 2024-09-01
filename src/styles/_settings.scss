@@ -35,12 +35,13 @@ main {
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
     main {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 22px;
+        margin: auto;
     }
 
     .App {
