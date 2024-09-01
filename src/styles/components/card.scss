@@ -38,4 +38,24 @@
 }
 
 
-
+@media screen and (max-width: 375px) {
+    .card-container {
+       display: flex;
+       flex-direction: column;
+       background-color: transparent;
+       width: fit-content;
+       gap: 22px;
+       width: 335px;
+       margin: 0;
+       padding: 0;
+       .card{
+        width: 355px;
+        height: 255px;
+       }
+       .card-cover {
+        width: 335px;
+        height: 255px;
+       }
+    }
+}
+    

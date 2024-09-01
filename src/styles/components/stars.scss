@@ -11,3 +11,17 @@
 .star.filled {
     color: $primary-color; 
 }
+
+@media screen and (max-width: 375px) {
+    .logement-stars {
+        display: none;
+    } 
+
+    .stars {
+        gap: 7px;
+    }
+    .star {
+        font-size: 18px;
+    }
+
+}

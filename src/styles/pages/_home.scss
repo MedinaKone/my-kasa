@@ -5,3 +5,13 @@
     gap: 50px;
     justify-content: center
   }
+
+  @media screen and (max-width: 375px) {
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      justify-content: center
+    }
+    }

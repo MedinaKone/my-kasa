@@ -31,7 +31,9 @@ const Logement = () => {
             <h2 className="logement-title">{logement.title}</h2>
             <p className="logement-location">{logement.location}</p>
           </div>
+          <div className="logement-host">
           <Host name={logement.host.name} picture={logement.host.picture} />
+          </div>
         </div>
         <div className="tags-and-stars">
           <div className="logement-tags">
@@ -41,6 +43,10 @@ const Logement = () => {
           </div>
           <div className="logement-stars">
             <Stars rating={parseInt(logement.rating)} />{" "}
+          </div>
+          <div className="logement-stars-host-mobile">
+          <Stars rating={parseInt(logement.rating)} />{" "}
+          <Host name={logement.host.name} picture={logement.host.picture} />
           </div>
         </div>
         <div className="logement-infos">

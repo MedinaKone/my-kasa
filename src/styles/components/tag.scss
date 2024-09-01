@@ -15,3 +15,15 @@
     display: flex;
     gap: 10px;
 }
+
+@media screen and (max-width: 375px) {
+  .logement-tag {
+    height: 18px;
+    font-size: 10px ;
+    padding: 5px 10px 0px 10px;
+  }
+
+  .logement-tags {
+    flex-wrap: wrap;
+  }
+}

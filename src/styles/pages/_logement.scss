@@ -34,7 +34,6 @@
 .tags-and-stars {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
 }
 
 .logement-header {
@@ -48,3 +47,40 @@
     flex-direction: column;
 }
 
+.logement-stars-host-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+    .main-logement {
+        width: 335px;
+    } 
+
+    .logement-title {
+        font-size: 18px;
+    }
+
+    .logement-location {
+        font-size: 14px;
+    }
+
+    .tags-and-stars {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .logement-stars-host {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logement-stars-host-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }  
+}

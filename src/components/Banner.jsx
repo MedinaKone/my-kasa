@@ -7,7 +7,7 @@ const Banner = ({type}) => {
 
   return (
     <div>
-      <img src={bannerSrc} alt={altText} />
+      <img src={bannerSrc} alt={altText} className='Banner-image' />
     </div>
   )
 }

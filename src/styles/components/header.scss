@@ -1,25 +1,56 @@
 header {
-    padding: 45px 45px 0px 45px;
-    display: flex;
-    justify-content: space-between;
-    .header .img {
-      margin-right: 10px;
-    }
-    .navbar ul {
-      list-style-type: none;
-      display: flex;
-      gap: 57px;
-      font-size: 24px;
-      font-weight: 500;
-      .nav-link {
-        text-decoration: none;
-        color: black;
-      }
-      .nav-link-active {
-        text-decoration: underline;
-      }
-    }
+  padding: 45px 45px 0px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centre verticalement le contenu */
+  max-width: 100%; /* Limite la largeur pour éviter le débordement */
+  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+  overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+.header .img {
+  margin-right: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 57px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0; /* Supprime les paddings par défaut */
+  margin: 0; /* Supprime les marges par défaut */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link-active {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 375px) {
+  header {
+      padding: 20px; 
+      flex-wrap: wrap; 
   }
+  .header .img {
+    margin-right: 10px;
+    width: 145px;
+    height: 46px;
+  }
+  .navbar ul {
+      gap: 20px;
+      font-size: 12px; 
+  }
+  .nav-link {
+    text-transform: uppercase;
+  }
+}
+
   
 
   

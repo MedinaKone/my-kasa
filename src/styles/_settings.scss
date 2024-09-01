@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-}
+// Colors
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+$text-color__white: #FFFFFF;
+$text-color__black: #000000;
+
 
 .App {
     background-color: white;
@@ -13,13 +13,40 @@ main {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100%; /* Empêche le débordement horizontal */
+    overflow-x: hidden; /* Masque tout débordement horizontal */
+    padding: 0 16px; /* Ajoute un padding pour éviter que le contenu touche les bords */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    overflow-x: hidden; /* Empêche le débordement horizontal de tout le document */
+}
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: row;
+    max-width: 100%; /* Assure que main ne dépasse pas la largeur de son conteneur */
+    box-sizing: border-box;
+}
 
-// Colors
-$primary-color: #FF6060;
-$secondary-color: #F6F6F6;
-$text-color__white: #FFFFFF;
-$text-color__black: #000000
+@media screen and (max-width: 375px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 22px;
+    }
+
+    .App {
+        width: 100%; /* Assure que la largeur ne dépasse pas l'écran */
+        padding: 0 16px; /* Ajuste les paddings pour garder une bonne lisibilité */
+        box-sizing: border-box; /* Empêche les paddings d'affecter la largeur totale */
+        gap: 27px;
+    }
+}

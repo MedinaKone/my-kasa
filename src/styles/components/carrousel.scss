@@ -54,3 +54,18 @@
     font-size: 18px;
     font-family: 'montserrat';
   }
+
+  @media screen and (max-width: 375px) {
+    .logement-img {
+        width: 100%;
+    } 
+
+    .image-counter {
+      display: none;
+    }
+
+    .prev img, .next img {
+      width: 24px;  
+      height: 24  px; 
+    }
+}
