@@ -36,18 +36,18 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 22px;
-        margin: auto;
-    }
-
     .App {
         width: 100%; /* Assure que la largeur ne dépasse pas l'écran */
         padding: 0 16px; /* Ajuste les paddings pour garder une bonne lisibilité */
         box-sizing: border-box; /* Empêche les paddings d'affecter la largeur totale */
         gap: 27px;
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 22px;
+            margin: auto;
+        }
     }
 }

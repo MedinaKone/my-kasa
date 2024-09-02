@@ -1,16 +1,17 @@
 .stars {
     display: flex;
     gap: 15px;
+    .star {
+        font-size: 36px;
+        color: #E3E3E3; 
+    }
+    
+    .star.filled {
+        color: $primary-color; 
+    }
+    
 }
 
-.star {
-    font-size: 36px;
-    color: #E3E3E3; 
-}
-
-.star.filled {
-    color: $primary-color; 
-}
 
 @media screen and (max-width: 768px) {
     .logement-stars {
@@ -19,9 +20,8 @@
 
     .stars {
         gap: 7px;
+        .star {
+            font-size: 18px;
+        }
     }
-    .star {
-        font-size: 18px;
-    }
-
 }

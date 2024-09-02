@@ -1,65 +1,62 @@
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-    background-color: $secondary-color;
-    border-radius: 25px;
-    width: 1240px;
-    padding: 50px 0px;
-    .card {
-        width: 340px;
-        height: 340px;
-        color: $text-color__white;
-        position: relative;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  background-color: $secondary-color;
+  border-radius: 25px;
+  width: 1240px;
+  padding: 50px 0px;
+  .card {
+    width: 340px;
+    height: 340px;
+    color: $text-color__white;
+    position: relative;
+  }
 }
-
 
 .card-image-container {
-    position: relative;
-    .card-cover {
-        width: 340px;
-        height: 340px;
-        gap: 50px;
-        object-fit: cover;
-        display: block;
-        border-radius: 10px;
-    }
-    .card-title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        margin: 20px;
-        font-size: 18px;
-        line-height: 25.67px;
-        width: 50%;
-    }
+  position: relative;
+  .card-cover {
+    width: 340px;
+    height: 340px;
+    gap: 50px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  .card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    font-size: 18px;
+    line-height: 25.67px;
+    width: 50%;
+  }
 }
-
 
 @media screen and (max-width: 768px) {
-    .card-section {
-        display: flex;
-        justify-content: center;
-    }
+  .card-section {
+    display: flex;
+    justify-content: center;
     .card-container {
-       display: flex;
-       flex-direction: column;
-       background-color: transparent;
-       width: fit-content;
-       gap: 22px;
-       width: 335px;
-       margin: 0;
-       padding: 0;
-       .card{
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
+      width: fit-content;
+      gap: 22px;
+      width: 335px;
+      margin: 0;
+      padding: 0;
+      .card {
         width: 355px;
         height: 255px;
-       }
-       .card-cover {
-        width: 335px;
-        height: 255px;
-       }
+        .card-cover {
+          width: 335px;
+          height: 255px;
+        }
+      }
     }
+  }
 }
-    
