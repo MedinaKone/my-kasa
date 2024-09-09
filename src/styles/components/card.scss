@@ -1,62 +1,69 @@
 .card-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: center;
-  background-color: $secondary-color;
-  border-radius: 25px;
-  width: 1240px;
-  padding: 50px 0px;
+  flex-wrap: wrap; /* Permet aux cartes de se répartir sur plusieurs lignes si nécessaire */
+  gap: 50px; /* Espacement entre les cartes */
+  justify-content: center; /* Centre les cartes horizontalement */
+  background-color: $secondary-color; /* Couleur de fond définie par une variable SCSS */
+  border-radius: 25px; /* Coins arrondis pour le conteneur */
+  width: 1240px; /* Largeur fixe du conteneur */
+  padding: 50px 0px; /* Espacement vertical à l'intérieur du conteneur */
+
   .card {
-    width: 340px;
-    height: 340px;
-    color: $text-color__white;
-    position: relative;
+      width: 340px; /* Largeur de chaque carte */
+      height: 340px; /* Hauteur de chaque carte */
+      color: $text-color__white; /* Couleur du texte définie par une variable SCSS */
+      position: relative; /* Position relative pour permettre le positionnement absolu des éléments à l'intérieur */
   }
 }
 
 .card-image-container {
-  position: relative;
+  position: relative; /* Position relative pour gérer les éléments positionnés à l'intérieur */
+
   .card-cover {
-    width: 340px;
-    height: 340px;
-    gap: 50px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
+      width: 340px; /* Largeur de l'image de couverture de la carte */
+      height: 340px; /* Hauteur de l'image de couverture de la carte */
+      gap: 50px; /* Espacement entre les éléments (non nécessaire ici, peut-être une erreur) */
+      object-fit: cover; /* L'image couvre toute la surface sans être déformée */
+      display: block; /* Affichage en bloc de l'image */
+      border-radius: 10px; /* Coins arrondis pour l'image de couverture */
   }
+
   .card-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 20px;
-    font-size: 18px;
-    line-height: 25.67px;
-    width: 50%;
+      position: absolute; /* Positionnement absolu pour placer le titre sur l'image */
+      bottom: 0; /* Le titre est placé en bas de la carte */
+      left: 0; /* Le titre est aligné à gauche */
+      margin: 20px; /* Espacement autour du titre */
+      font-size: 18px; /* Taille de la police du titre */
+      line-height: 25.67px; /* Hauteur de ligne du titre */
+      width: 50%; /* Le titre occupe 50% de la largeur de la carte */
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Media Query pour les écrans de taille maximale de 376px */
+@media screen and (max-width: 376px) {
   .card-section {
-    display: flex;
-    justify-content: center;
-    .card-container {
       display: flex;
-      flex-direction: column;
-      background-color: transparent;
-      width: fit-content;
-      gap: 22px;
-      width: 335px;
-      margin: 0;
-      padding: 0;
-      .card {
-        width: 355px;
-        height: 255px;
-        .card-cover {
-          width: 335px;
-          height: 255px;
-        }
+      justify-content: center; /* Centre la section des cartes horizontalement */
+
+      .card-container {
+          display: flex;
+          flex-direction: column; /* Les cartes sont alignées en colonne sur les petits écrans */
+          background-color: transparent; /* Le fond devient transparent sur les petits écrans */
+          width: fit-content; /* La largeur s'ajuste au contenu */
+          gap: 22px; /* Réduction de l'espacement entre les cartes */
+          width: 335px; /* Largeur fixe du conteneur sur les petits écrans */
+          margin: 0; /* Annulation des marges */
+          padding: 0; /* Annulation des paddings */
+          
+          .card {
+              width: 355px; /* Largeur de chaque carte sur petits écrans */
+              height: 255px; /* Hauteur de chaque carte sur petits écrans */
+
+              .card-cover {
+                  width: 335px; /* Largeur de l'image de couverture sur petits écrans */
+                  height: 255px; /* Hauteur de l'image de couverture sur petits écrans */
+              }
+          }
       }
-    }
   }
 }

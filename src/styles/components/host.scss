@@ -13,25 +13,24 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 376px) {
     .host {
         display: flex;
         align-items: center;
         margin-left: auto;
         gap: 0;  
-          .host-name {
-            margin-right: 10px;
-            font-size: 12px;
-            width: 93px;
-            text-align: right;
-        }
-    
         .host-picture {
             width: 32px;
             height: 32px;
             border-radius: 50%;
             object-fit: cover;
         }
+          .host-name {
+            margin-right: 10px;
+            font-size: 12px;
+            width: 93px;
+            text-align: right;
+        }     
     } 
     .logement-host {
         display: none;

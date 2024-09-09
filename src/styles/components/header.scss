@@ -1,49 +1,56 @@
 header {
-  padding: 45px 45px 0px 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  padding: 45px 45px 0px 45px; /* Espacement interne : 45px en haut, à droite, et à gauche, 0px en bas */
+  display: flex; /* Utilisation de Flexbox pour organiser le contenu */
+  justify-content: space-between; /* Espace entre les éléments (à gauche et à droite) */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  max-width: 100%; /* La largeur du header prend tout l'espace disponible */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions totales */
+  overflow-x: hidden; /* Cache le débordement horizontal */
+
   .header-img {
-    margin-right: 10px;
+    margin-right: 10px; /* Espace à droite de l'image dans le header */
   }
 
   .navbar ul {
-    list-style-type: none;
-    display: flex;
-    gap: 57px;
-    font-size: 24px;
-    font-weight: 500;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Supprime les puces des éléments de la liste */
+    display: flex; /* Les éléments du menu sont alignés horizontalement */
+    gap: 57px; /* Espace entre les éléments du menu */
+    font-size: 24px; /* Taille de la police des éléments du menu */
+    font-weight: 500; /* Épaisseur de la police */
+    padding: 0; /* Supprime le padding interne */
+    margin: 0; /* Supprime la marge externe */
+
     .nav-link {
-      text-decoration: none;
-      color: black;
+      text-decoration: none; /* Supprime le soulignement des liens */
+      color: black; /* Couleur des liens */
+      font-weight: 500; /* Épaisseur de la police des liens */
     }
+
     .nav-link-active {
-      text-decoration: underline;
+      text-decoration: underline; /* Souligne le lien actif pour le différencier */
     }
   }
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
+/* Ajustements pour les écrans de petite taille */
+@media screen and (max-width: 376px) {
   header {
-    padding: 20px;
-    flex-wrap: wrap;
+    padding: 20px 0px 20px 0px; /* Espacement interne réduit sur petits écrans */
+    flex-wrap: wrap; /* Les éléments du header se réorganisent pour s'adapter à la largeur de l'écran */
+
     .header-img {
-      margin-right: 10px;
-      width: 145px;
-      height: 46px;
+      margin-right: 10px; /* Espace à droite de l'image dans le header */
+      width: 145px; /* Largeur de l'image du header sur petits écrans */
+      height: 46px; /* Hauteur de l'image du header sur petits écrans */
     }
+
     .navbar ul {
-      gap: 20px;
-      font-size: 12px;
+      gap: 20px; /* Espacement réduit entre les éléments du menu */
+      font-size: 12px; /* Taille de la police réduite pour le menu */
     }
+
     .nav-link {
-      text-transform: uppercase;
+      text-transform: uppercase; /* Transforme le texte des liens en majuscules */
     }
   }
 }

@@ -1,35 +1,54 @@
 .errorMainContent {
     display: flex;
     flex-direction: column;
-    gap: 139px;
-    justify-content: center;
-    margin: auto;
-    justify-content: center;
-    .errorText {
-        color: $primary-color;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        .codeError404 {
-            font-size: 288px;
-            font-weight: 700;
-            display: flex;
-            justify-content: center;
-          }
-        .errorDescription {
-            font-size: 36px;
-            font-weight: 700;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }          
+    gap: 139px; /* Espacement entre les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin: auto; /* Centrage automatique horizontal */
+    
+    /* Media Query pour les écrans de taille maximale de 376px */
+    @media screen and (max-width: 376px) {
+        gap: 90px; /* Réduction de l'espacement sur les petits écrans */
     }
-    .homeLink {
-        font-size: 18px;
-        text-decoration: underline;
+
+    .errorText {
+        color: $primary-color; /* Couleur du texte, probablement définie dans une variable SCSS */
         display: flex;
-        justify-content: center;
-        margin-bottom: 139px;
+        justify-content: center; /* Centre les éléments horizontalement */
+        flex-direction: column; /* Aligne les éléments verticalement */
+
+        .codeError404 {
+            font-size: 288px; /* Taille du texte pour le code d'erreur 404 */
+            font-weight: 700; /* Texte en gras */
+            display: flex;
+            justify-content: center; /* Centre le texte horizontalement */
+
+            /* Media Query pour les écrans de taille maximale de 768px */
+            @media screen and (max-width: 768px) {
+                font-size: 96px; /* Réduction de la taille de la police sur les écrans moyens */
+                padding: 2rem 0; /* Ajout de padding vertical */
+            }
+        }
+
+        .errorDescription {
+            font-size: 36px; /* Taille du texte pour la description de l'erreur */
+            font-weight: 700; /* Texte en gras */
+            display: flex;
+            justify-content: center; /* Centre le texte horizontalement */
+            text-align: center; /* Centrage du texte */
+
+            /* Media Query pour les écrans de taille maximale de 768px */
+            @media screen and (max-width: 376px) {
+                font-size: 18px; /* Réduction de la taille de la police sur les écrans moyens */
+            }
+        }
+    }
+
+    .homeLink {
+        font-size: 18px; /* Taille de la police pour le lien vers la page d'accueil */
+        text-decoration: underline; /* Soulignement du lien */
+        display: flex;
+        justify-content: center; /* Centre le lien horizontalement */
+        margin-bottom: 139px; /* Espace en bas */
     }
 }
 

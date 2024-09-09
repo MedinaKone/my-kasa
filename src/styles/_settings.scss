@@ -35,7 +35,9 @@ main {
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 376px) {
     .App {
         width: 100%; /* Assure que la largeur ne dépasse pas l'écran */
         padding: 0 16px; /* Ajuste les paddings pour garder une bonne lisibilité */

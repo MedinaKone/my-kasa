@@ -1,3 +1,4 @@
+// Styles généraux
 .main-logement {
   display: flex;
   justify-content: center;
@@ -13,6 +14,11 @@
     display: flex;
     justify-content: center;
     margin: auto;
+
+    @media screen and (max-width: 376px) {
+      width: 335px;
+      height: 255px;
+    }
   }
 
   .logement-header {
@@ -23,26 +29,7 @@
     .logement-info {
       display: flex;
       flex-direction: column;
-
-      .logement-title {
-        color: $primary-color;
-        font-size: 36px;
-        font-weight: 500;
-        font-family: "Montserrat";
-        margin: 0;
-      }
-
-      .logement-location {
-        font-size: 18px;
-        font-weight: 500;
-        font-family: "Montserrat";
-        margin-bottom: 0;
-      }
     }
-  }
-
-  .logement-stars-host-mobile {
-    display: none;
   }
 
   .tags-and-stars {
@@ -51,35 +38,57 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+.logement-title {
+  color: $primary-color;
+  font-size: 36px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+.logement-location {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  margin-bottom: 0;
+}
+
+.logement-stars-host-mobile {
+  display: none;
+}
+
+// Styles pour les écrans de moins de 376px
+@media screen and (max-width: 376px) {
   .main-logement {
     width: 100%;
+  }
 
-    .logement-title {
-      font-size: 18px;
-    }
+  .logement-location {
+    font-size: 14px;
+  }
 
-    .logement-location {
-      font-size: 14px;
-    }
+  .tags-and-stars {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 27px;
+  }
 
-    .tags-and-stars {
-      flex-wrap: wrap;
-      flex-direction: column;
-      gap: 27px;
-    }
-    .logement-stars-host-mobile {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .logement-stars-host {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
+  .logement-stars-host-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logement-stars-host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logement-title {
+    font-size: 18px;
   }
 }

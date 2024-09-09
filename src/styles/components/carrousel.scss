@@ -55,7 +55,7 @@
     font-family: 'montserrat';
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 376px) {
     .logement-img {
         width: 100%;
     } 
@@ -65,7 +65,7 @@
     }
 
     .prev img, .next img {
-      width: 24px;  
-      height: 24  px; 
+      width: 12px;  
+      height: 19px; 
     }
 }

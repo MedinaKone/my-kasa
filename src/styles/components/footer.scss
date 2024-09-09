@@ -7,3 +7,11 @@
     justify-content: center;
     flex-direction: column;
   }
+
+  @media screen and (max-width: 376px) {
+    .footer-text  {
+      width: 135px;
+      text-align: center;
+    }
+  }
+  

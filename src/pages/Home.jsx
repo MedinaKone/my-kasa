@@ -12,7 +12,9 @@ const Home = () => {
         <Banner type="home" />
         <section className="card-section">
           <div className="card-container">
-            <Card logements={logements} />
+            {logements.map((logement, index)=> (
+            <Card logement={logement} key={index}/> 
+            ))  }
           </div>
         </section>
       </main>

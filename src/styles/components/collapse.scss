@@ -1,98 +1,108 @@
-$gap-size: 30px;
-$border-radius: 5px;
+$gap-size: 30px; /* Variable pour la taille des espaces */
+$border-radius: 5px; /* Variable pour les coins arrondis */
 
 @mixin transition($transition) {
-    transition: $transition;
+  transition: $transition; /* Mixin pour appliquer des transitions */
 }
-
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .accordion {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        width: 100%;
-        .item {
-            border-radius: $border-radius;
-        }
-        .title {
-            background-color: $primary-color;
-            color: $text-color__white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer; 
-            border-radius: $border-radius;
-            padding: 10px 20px 10px 15px;
-            height: 52px;
-            .fa-solid.fa-chevron-down, .fa-solid.fa-chevron-up {
-                font-size: 23px;
-            }
-        }
-        .content {
-            background-color: $secondary-color;
-            color: $text-color__black;
-            max-height: 0;
-            overflow: hidden;
-            transition: all cubic-bezier(0,1,0,1);
-        }
-        .content.show {
-            padding: 15px 15px 15px 15px;
-            height: auto;
-            max-height: 9999px;
-            transition: all  cubic-bezier(1,0,1,0);
-        }        
-    }
+  display: flex;
+  justify-content: center; /* Centre horizontalement le contenu de .wrapper */
+  align-items: center; /* Centre verticalement le contenu de .wrapper */
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments en colonne */
+  gap: $gap-size; /* Espace entre les éléments */
+  width: 100%; /* L'accordéon prend toute la largeur disponible */
+}
 
-//Page "ABOUT"
+.item {
+  border-radius: $border-radius; /* Coins arrondis pour chaque élément de l'accordéon */
+}
+
+.title {
+  background-color: $primary-color; /* Couleur de fond définie par une variable SCSS */
+  color: $text-color__white; /* Couleur du texte définie par une variable SCSS */
+  display: flex; /* Flexbox pour l'alignement des éléments */
+  justify-content: space-between; /* Espace entre les éléments (titre et icône) */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  cursor: pointer; /* Curseur en forme de main pour indiquer un élément cliquable */
+  border-radius: $border-radius; /* Coins arrondis pour le titre */
+  padding: 10px 20px 10px 15px; /* Espacement interne */
+  height: 52px; /* Hauteur fixe pour le titre */
+}
+
+.fa-solid.fa-chevron-down,
+.fa-solid.fa-chevron-up {
+  font-size: 23px; /* Taille des icônes de chevron */
+}
+
+.content {
+  background-color: $secondary-color; /* Couleur de fond définie par une variable SCSS */
+  color: $text-color__black; /* Couleur du texte définie par une variable SCSS */
+  max-height: 0; /* Hauteur initiale de 0 pour masquer le contenu */
+  overflow: hidden; /* Masque le contenu qui dépasse */
+  transition: all cubic-bezier(0, 1, 0, 1); /* Transition pour l'ouverture/fermeture du contenu */
+}
+
+.content.show {
+  padding: 15px; /* Ajoute un padding lorsque le contenu est visible */
+  height: auto; /* Hauteur automatique pour le contenu visible */
+  max-height: 9999px; /* Large max-height pour permettre l'affichage complet */
+  transition: all cubic-bezier(1, 0, 1, 0); /* Transition différente pour l'ouverture complète */
+}
+
+/* Page "ABOUT" */
 .about-details {
-    width: 1023px;
+  width: 1023px; /* Largeur fixe pour la section "ABOUT" */
 }
 
-// Page "LOGEMENT"
+/* Page "LOGEMENT" */
 .logement-infos {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
+  display: flex;
+  align-items: flex-start; /* Aligne les éléments en haut */
+  gap: $gap-size; /* Espace entre les éléments */
 }
 
 .logement-equipements,
 .logement-description {
-    width: 50%;    
+  width: 50%; /* Chaque section prend 50% de la largeur disponible */
 }
 
 .logement-equipements ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  list-style-type: none; /* Supprime les puces des listes */
+  padding: 0; /* Supprime le padding interne */
+  margin: 0; /* Supprime la marge externe */
+  width: 100%; /* La liste prend toute la largeur disponible */
 }
 
 .arrow {
-    transition: transform 0.3s ease; /* Animation douce */
+  transition: transform 0.3s ease; /* Transition douce pour la rotation de la flèche */
+}
+
+.arrow-up {
+  transform: rotate(180deg); /* Rotation de 180 degrés pour inverser la flèche */
+}
+
+/* Media Query pour les écrans de taille maximale de 376px */
+@media screen and (max-width: 376px) {
+  .about-details {
+    width: 100%; /* La section "ABOUT" prend toute la largeur sur petits écrans */
   }
-  
-  .arrow-up {
-    transform: rotate(180deg); /* Rotation de 180 degrés pour la flèche vers le haut */
+
+  .logement-infos {
+    flex-direction: column; /* Les informations de logement sont alignées en colonne */
   }
-  
 
+  .logement-description,
+  .logement-equipements {
+    width: 100%; /* Chaque section prend toute la largeur sur petits écrans */
+  }
 
-@media screen and (max-width: 768px) {
-    .about-details {
-        width: 100%;
-    }
-    
-    .logement-infos {
-        flex-direction: column;
-    }
-
-    .logement-description, .logement-equipements {
-        width: 100%;
-    }
+  .wrapper .accordion .title {
+    height: 30px; /* Hauteur réduite du titre sur petits écrans */
+    font-size: 13px; /* Taille de la police réduite sur petits écrans */
+  }
 }
